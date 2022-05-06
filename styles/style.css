@@ -31,7 +31,7 @@
 }
 .header__title {
   align-self: center;
-  width: 730px;
+  max-width: 730px;
   margin: 0 0 0 64px;
   padding: 0;
   font-size: 102px;
@@ -40,7 +40,7 @@
 }
 .header__subtitle {
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   margin: 0;
   padding: 0;
   bottom: 30px;
@@ -53,8 +53,13 @@
   text-decoration: none;
   color:#2f80ed;
 }
+.header__link:hover {
+  background-color: #1f1f1f;
+  color: #f2f2f2;
+}
 .header__main-illustration {
   background-color: #2f80ed;
+  object-fit: contain;
   position: absolute;
   right: 0;
   top: 64px;
@@ -92,8 +97,6 @@
   color: #2f80ed;
 }
 .two-columns__main-text {
-  display: flex;
-  flex-direction: column;
   width: 80%;
   min-width: 784px;
 }
@@ -122,7 +125,7 @@
   align-items: center;
 }
 .section-title {
-  width: 60%;
+  max-width: 60%;
   margin: 0 0 20px;
   padding: 0;
   line-height: 1.15;
@@ -131,7 +134,7 @@
   text-align: center;
 }
 .section-subtitle {
-  width: 60%;
+  max-width: 60%;
   margin: 0;
   padding: 0;
   line-height: 34px;
@@ -170,6 +173,7 @@
 .feynman {
   position: relative;
   height: 890px;
+  padding: 100px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,8 +184,7 @@
   background-size: 867px 637px;
 }
 .feynman__title {
-  width: 648px;
-  margin: 100px 0 0;
+  max-width: 648px;
   padding: 0;
   text-align: center;
   line-height: 1.15;
@@ -205,6 +208,10 @@
   text-decoration: none;
   color:#2f80ed;
 }
+.feynman__link:hover {
+  background-color: #1f1f1f;
+  color: #f2f2f2;
+}
 
 /*Секция, блок kaufman*/
 .kaufman {
@@ -216,20 +223,21 @@
   padding-bottom: 90px;
   z-index: 0;
   overflow: hidden;
+  padding: 90px 0 0;
 }
 .section-title_theme_dark {
-  margin: 90px 0 0;
+  padding: 20px 0 0;
   color: #f2f2f2;
 }
 .section-subtitle_theme_dark {
-  margin: 20px 0 0;
   color: #f2f2f2;
 }
 .table_theme_dark {
-  margin-top: 80px;
+  color: #f2f2f2;
 }
 .table__cell_theme_dark {
   width: 200px;
+  margin: 80px 0 0;
 }
 .table__heading_theme_dark {
   color: #f2f2f2;
@@ -260,20 +268,19 @@
 .footer__columns {
   width: 90%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
-.footer__columns_content-copyright {
-  flex: 0 0 771px;
+.footer__column {
+  display: flex;
   flex-direction: column;
 }
-.footer__columns_content-info {
-  display: inline;
-  width: auto;
+.footer__column_content-copyright {
+  flex-basis: 771px;
+  justify-content: space-between;
 }
-.footer__columns_content-social {
-  display: inline;
-  width: auto;
+.footer__column_content-info {
+}
+.footer__column_content-social {
 }
 .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
