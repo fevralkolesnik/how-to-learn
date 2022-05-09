@@ -59,7 +59,6 @@
 }
 .header__square-pic {
   background-color: #2f80ed;
-  object-fit: cover;
   position: absolute;
   right: 0;
   top: 64px;
@@ -70,6 +69,7 @@
 .header__main-illustration {
   width: 765px;
   height: 608px;
+  object-fit: cover;
   position: absolute;
   bottom: 0;
   right: 0;
